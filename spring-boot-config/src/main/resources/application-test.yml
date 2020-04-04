@@ -1,0 +1,7 @@
+server.port: 8081
+my.list.values: joy,peace,love
+dbValues: "{connectionlink :'http://....',userName:' restypan',password:'123'}"
+db:
+  host: 127.0.0.1
+  port: 1000
+management.endpoints.web.exposure.include: "*"
