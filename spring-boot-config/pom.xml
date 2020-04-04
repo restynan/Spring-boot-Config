@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-config</name>
     <description>Demo project for Spring Boot</description>
-
+<packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -22,6 +22,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
         <dependency>
@@ -39,9 +43,19 @@
 
     <build>
         <plugins>
+<!--            <plugin>-->
+<!--              <groupId>org.springframework.boot</groupId>&ndash;&gt;-->
+<!--               <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>1.4.0</version>
+                <configuration>
+                    <mainClass>io.javabrains.springbootconfig.SpringBootConfigApplication</mainClass>
+                </configuration>
+
+
             </plugin>
         </plugins>
     </build>
