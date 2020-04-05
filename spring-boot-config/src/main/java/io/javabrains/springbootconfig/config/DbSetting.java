@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties("db")
 public class DbSetting {
-    private  String host;
+    private String host;
     private int port;
 
     public String getHost() {
